@@ -19,6 +19,12 @@
             <stop offset="1" stop-color="#3FB950" />
         </linearGradient>
 
+        <linearGradient id="accent" x1="70" y1="0" x2="1130" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#58A6FF" />
+            <stop offset="0.5" stop-color="#A371F7" />
+            <stop offset="1" stop-color="#3FB950" />
+        </linearGradient>
+
         <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
             <feGaussianBlur stdDeviation="5" result="blur" />
 
