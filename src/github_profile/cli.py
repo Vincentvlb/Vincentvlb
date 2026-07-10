@@ -110,6 +110,14 @@ def generate(
         console.print(
             "[green]✓[/green] Copied: docs/navx/navx.glb"
         )
+        generate_svg(
+            profile=profile,
+            template_path=Path("templates/navx-card.svg.j2"),
+            output_path=Path("assets/generated/navx-card.svg"),
+        )
+        console.print(
+            "[green]✓[/green] Generated: assets/generated/navx-card.svg"
+        )
     except (FileNotFoundError, TemplateError) as error:
         console.print(f"[red]✗ Generation failed:[/red] {error}")
         raise typer.Exit(code=1) from error
