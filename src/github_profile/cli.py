@@ -67,7 +67,7 @@ def generate(
         help="Path to the Jinja2 README template.",
     ),
     output: Path = typer.Option(
-        Path("README.generated.md"),
+        Path("README.md"),
         "--output",
         "-o",
         help="Output path for the generated README.",

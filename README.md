@@ -1,3 +1,90 @@
-# Vincentvlb
+<!--
+This file is generated automatically.
+Edit profile.yaml or the templates instead.
+-->
 
-GitHub profile generator.
+<div align="center">
+
+<img
+  src="./assets/generated/hero.svg"
+  alt="Vincent Lambert — Robotics Engineer • AI • Embedded Systems"
+  width="100%"
+/>
+
+</div>
+
+<br>
+
+<div align="center">
+
+<img
+  src="./assets/generated/engineering-profile.svg"
+  alt="End-to-end robotics engineering capabilities"
+  width="100%"
+/>
+
+</div>
+
+<br>
+
+<div align="center">
+
+<img
+  src="./assets/generated/engineering-cycle.svg"
+  alt="End-to-end robotic product engineering workflow"
+  width="100%"
+/>
+
+</div>
+
+<br>
+
+<div align="center">
+
+<img
+  src="./assets/generated/technical-stack.svg"
+  alt="Technical stack"
+  width="100%"
+/>
+
+</div>
+
+<br>
+
+<div align="center">
+
+<img
+  src="./assets/generated/highlights-header.svg"
+  alt="Engineering highlights"
+  width="100%"
+/>
+
+</div>
+
+<br>
+
+<a href="https://shop.natuition.com/shop/n2168-navx-2678">
+  <img
+    src="./assets/generated/navx-card.svg"
+    alt="NAVX high-precision GNSS receiver"
+    width="100%"
+  />
+</a>
+
+<br>
+
+<a href="https://github.com/opengisch/qfield">
+  <img
+    src="./assets/generated/qfield-card.svg"
+    alt="QField integrated NTRIP client"
+    width="100%"
+  />
+</a>
+
+<br>
+
+<img
+  src="./assets/generated/vision-pipeline-card.svg"
+  alt="Real-time industrial AI vision pipeline"
+  width="100%"
+/>
