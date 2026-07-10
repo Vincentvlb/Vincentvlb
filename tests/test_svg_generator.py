@@ -4,7 +4,6 @@ from github_profile.generators.svg import generate_svg
 from github_profile.models import (
     EngineeringDomains,
     Identity,
-    Learning,
     Profile,
     RobotIdentity,
 )
@@ -30,10 +29,6 @@ def create_test_profile() -> Profile:
             embedded_systems=[],
             software=[],
             infrastructure=[],
-        ),
-        learning=Learning(
-            enabled=True,
-            topics=[],
         ),
         engineering_highlights=[],
     )

@@ -92,11 +92,27 @@ def generate(
         console.print("[green]✓[/green] Generated: assets/generated/hero.svg")
         generate_svg(
             profile=profile,
+            template_path=Path("templates/engineering-profile.svg.j2"),
+            output_path=Path("assets/generated/engineering-profile.svg"),
+        )
+        console.print(
+            "[green]✓[/green] Generated: assets/generated/engineering-profile.svg"
+        )
+        generate_svg(
+            profile=profile,
             template_path=Path("templates/engineering-cycle.svg.j2"),
             output_path=Path("assets/generated/engineering-cycle.svg"),
         )
         console.print(
             "[green]✓[/green] Generated: assets/generated/engineering-cycle.svg"
+        )
+        generate_svg(
+            profile=profile,
+            template_path=Path("templates/navx-card.svg.j2"),
+            output_path=Path("assets/generated/navx-card.svg"),
+        )
+        console.print(
+            "[green]✓[/green] Generated: assets/generated/navx-card.svg"
         )
         generate_navx_viewer(
             profile=profile,
@@ -110,14 +126,7 @@ def generate(
         console.print(
             "[green]✓[/green] Copied: docs/navx/navx.glb"
         )
-        generate_svg(
-            profile=profile,
-            template_path=Path("templates/navx-card.svg.j2"),
-            output_path=Path("assets/generated/navx-card.svg"),
-        )
-        console.print(
-            "[green]✓[/green] Generated: assets/generated/navx-card.svg"
-        )
+        
     except (FileNotFoundError, TemplateError) as error:
         console.print(f"[red]✗ Generation failed:[/red] {error}")
         raise typer.Exit(code=1) from error

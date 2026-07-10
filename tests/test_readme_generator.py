@@ -5,7 +5,6 @@ from github_profile.models import (
     EngineeringDomains,
     EngineeringHighlight,
     Identity,
-    Learning,
     Profile,
     RobotIdentity,
 )
@@ -31,10 +30,6 @@ def create_test_profile() -> Profile:
             embedded_systems=["STM32"],
             software=["Python"],
             infrastructure=["Docker"],
-        ),
-        learning=Learning(
-            enabled=True,
-            topics=["SwiftUI"],
         ),
         engineering_highlights=[
             EngineeringHighlight(
