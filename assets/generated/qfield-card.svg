@@ -1,5 +1,5 @@
 
-<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+<svg width="1200" height="400" viewBox="0 0 1200 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
     aria-labelledby="title description">
     <title id="title">QField integrated NTRIP client</title>
 
@@ -9,15 +9,21 @@
     </desc>
 
     <defs>
-        <linearGradient id="background" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+        <linearGradient id="background" x1="0" y1="0" x2="1200" y2="400" gradientUnits="userSpaceOnUse">
             <stop stop-color="#0D1117" />
             <stop offset="1" stop-color="#161B22" />
         </linearGradient>
 
-        <linearGradient id="accent" x1="80" y1="0" x2="1120" y2="0" gradientUnits="userSpaceOnUse">
+        <linearGradient id="accent2" x1="80" y1="0" x2="1120" y2="0" gradientUnits="userSpaceOnUse">
             <stop stop-color="#3FB950" />
             <stop offset="0.55" stop-color="#58A6FF" />
             <stop offset="1" stop-color="#A371F7" />
+        </linearGradient>
+
+        <linearGradient id="accent" x1="70" y1="0" x2="1130" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#58A6FF" />
+            <stop offset="0.5" stop-color="#A371F7" />
+            <stop offset="1" stop-color="#3FB950" />
         </linearGradient>
 
         <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
@@ -67,9 +73,9 @@
         }
     </style>
 
-    <rect width="1200" height="360" rx="28" fill="url(#background)" />
+    <rect width="1200" height="400" rx="28" fill="url(#background)" />
 
-    <rect class="card-border" x="1" y="1" width="1198" height="358" rx="27" />
+    <rect class="card-border" x="1" y="1" width="1198" height="398" rx="27" />
 
     
 <text x="70" y="58" fill="#8B949E"
@@ -77,41 +83,45 @@
     &gt; open_source_contribution
 </text>
 
+<text x="70" y="108" fill="url(#accent)" font-family="Inter, Segoe UI, Arial, sans-serif"
+    font-size="34" font-weight="700" filter="url(#glow)">
+    Integrated NTRIP client
+</text>
 
 
-    <text x="76" y="126" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="44"
+    <text x="70" y="166" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="44"
         font-weight="700">
-        QField — Integrated NTRIP client
+        QField project
     </text>
 
-    <text x="76" y="172" fill="url(#accent)" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24"
+    <text x="70" y="212" fill="url(#accent2)" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24"
         font-weight="600">
         Direct RTK rover connectivity inside the mobile application
     </text>
 
-    <text x="76" y="216" fill="#C9D1D9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19">
+    <text x="70" y="256" fill="#C9D1D9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19">
         Enables centimeter-level positioning without relying on an external mobile application.
     </text>
 
-    <text x="76" y="250" fill="#8B949E" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17">
+    <text x="70" y="290" fill="#8B949E" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17">
         Highly requested by French surveying and research communities.
     </text>
 
     <g>
-        <rect class="tag" x="76" y="286" width="180" height="42" rx="12" />
-        <text x="166" y="313" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15"
+        <rect class="tag" x="70" y="326" width="180" height="42" rx="12" />
+        <text x="166" y="353" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15"
             font-weight="600" text-anchor="middle">
             Open source
         </text>
 
-        <rect class="tag" x="270" y="286" width="180" height="42" rx="12" />
-        <text x="360" y="313" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15"
+        <rect class="tag" x="267" y="326" width="180" height="42" rx="12" />
+        <text x="360" y="353" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15"
             font-weight="600" text-anchor="middle">
             RTK GNSS
         </text>
 
-        <rect class="tag" x="464" y="286" width="220" height="42" rx="12" />
-        <text x="574" y="313" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15"
+        <rect class="tag" x="464" y="326" width="220" height="42" rx="12" />
+        <text x="574" y="353" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15"
             font-weight="600" text-anchor="middle">
             Centimeter positioning
         </text>
