@@ -82,18 +82,24 @@ def generate(
             template_path=template,
             output_path=output,
         )
+        console.print(f"[green]✓[/green] Generated: {output}")
         generate_svg(
             profile=profile,
             template_path=Path("templates/hero.svg.j2"),
             output_path=Path("assets/generated/hero.svg"),
         )
+        console.print("[green]✓[/green] Generated: assets/generated/hero.svg")
+        generate_svg(
+            profile=profile,
+            template_path=Path("templates/engineering-cycle.svg.j2"),
+            output_path=Path("assets/generated/engineering-cycle.svg"),
+        )
+        console.print(
+            "[green]✓[/green] Generated: assets/generated/engineering-cycle.svg"
+        )
     except (FileNotFoundError, TemplateError) as error:
         console.print(f"[red]✗ Generation failed:[/red] {error}")
         raise typer.Exit(code=1) from error
-
-    console.print(f"[green]✓[/green] Generated: {output}")
-    console.print("[green]✓[/green] Generated: assets/generated/hero.svg")
-
 
 @app.command()
 def version() -> None:
