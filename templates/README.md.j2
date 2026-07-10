@@ -51,31 +51,30 @@ Edit profile.yaml or the templates instead.
 
 <br>
 
-{% if profile.engineering_highlights %}
 ## Engineering highlights
 
-{% for highlight in profile.engineering_highlights %}
-### {% if highlight.url %}[{{ highlight.title }}]({{ highlight.url }}){% else %}{{ highlight.title }}{% endif %}
-
-{{ highlight.description }}
-
-{% if highlight.impact %}
-> {{ highlight.impact }}
-{% endif %}
-
-{% if highlight.viewer_url %}
-<a href="{{ highlight.viewer_url }}">
+<a href="https://shop.natuition.com/shop/n2168-navx-2678">
   <img
     src="./assets/generated/navx-card.svg"
-    alt="Explore the interactive 3D model of NAVX"
+    alt="NAVX high-precision GNSS receiver"
     width="100%"
   />
 </a>
-{% endif %}
 
-{% for detail in highlight.details %}
-- {{ detail }}
-{% endfor %}
+<br>
 
-{% endfor %}
-{% endif %}
+<a href="https://github.com/opengisch/qfield">
+  <img
+    src="./assets/generated/qfield-card.svg"
+    alt="QField integrated NTRIP client"
+    width="100%"
+  />
+</a>
+
+<br>
+
+<img
+  src="./assets/generated/vision-pipeline-card.svg"
+  alt="Real-time industrial AI vision pipeline"
+  width="100%"
+/>

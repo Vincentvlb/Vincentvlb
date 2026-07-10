@@ -1,0 +1,126 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+    aria-labelledby="title description">
+    <title id="title">QField integrated NTRIP client</title>
+
+    <desc id="description">
+        Open-source contribution enabling direct RTK GNSS rover connectivity
+        and centimeter-level positioning inside QField.
+    </desc>
+
+    <defs>
+        <linearGradient id="background" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0D1117" />
+            <stop offset="1" stop-color="#161B22" />
+        </linearGradient>
+
+        <linearGradient id="accent" x1="80" y1="0" x2="1120" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#3FB950" />
+            <stop offset="0.55" stop-color="#58A6FF" />
+            <stop offset="1" stop-color="#A371F7" />
+        </linearGradient>
+
+        <filter id="soft-glow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+
+    <style>
+        .card-border {
+            fill: none;
+            stroke: #30363d;
+            stroke-width: 2;
+            transition:
+                stroke 0.25s ease,
+                filter 0.25s ease;
+        }
+
+        .tag {
+            fill: #21262d;
+            stroke: #30363d;
+            stroke-width: 1.5;
+            transition:
+                stroke 0.25s ease,
+                fill 0.25s ease;
+        }
+
+        svg:hover .card-border {
+            stroke: #3fb950;
+            filter: url(#soft-glow);
+        }
+
+        svg:hover .tag {
+            fill: #1f2937;
+            stroke: #3fb950;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .card-border,
+            .tag {
+                transition: none;
+            }
+        }
+    </style>
+
+    <rect width="1200" height="360" rx="28" fill="url(#background)" />
+
+    <rect class="card-border" x="1" y="1" width="1198" height="358" rx="27" />
+
+    <text x="76" y="58" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
+        font-size="21">
+        &gt; open_source_contribution
+    </text>
+
+    <text x="76" y="126" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="44"
+        font-weight="700">
+        QField — Integrated NTRIP client
+    </text>
+
+    <text x="76" y="172" fill="url(#accent)" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24"
+        font-weight="600">
+        Direct RTK rover connectivity inside the mobile application
+    </text>
+
+    <text x="76" y="216" fill="#C9D1D9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19">
+        Enables centimeter-level positioning without relying on an external mobile application.
+    </text>
+
+    <text x="76" y="250" fill="#8B949E" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17">
+        Highly requested by French surveying and research communities.
+    </text>
+
+    <g>
+        <rect class="tag" x="76" y="286" width="180" height="42" rx="12" />
+        <text x="166" y="313" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15"
+            font-weight="600" text-anchor="middle">
+            Open source
+        </text>
+
+        <rect class="tag" x="270" y="286" width="180" height="42" rx="12" />
+        <text x="360" y="313" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15"
+            font-weight="600" text-anchor="middle">
+            RTK GNSS
+        </text>
+
+        <rect class="tag" x="464" y="286" width="220" height="42" rx="12" />
+        <text x="574" y="313" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15"
+            font-weight="600" text-anchor="middle">
+            Centimeter positioning
+        </text>
+    </g>
+
+    <g opacity="0.38">
+        <circle cx="1015" cy="174" r="94" stroke="#3FB950" stroke-width="3" />
+
+        <circle cx="1015" cy="174" r="58" stroke="#58A6FF" stroke-width="3" />
+
+        <path d="M1015 75V273M916 174H1114" stroke="#A371F7" stroke-width="3" stroke-linecap="round" />
+
+        <circle cx="1015" cy="174" r="12" fill="#3FB950" filter="url(#soft-glow)" />
+    </g>
+</svg>

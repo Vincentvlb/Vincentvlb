@@ -122,6 +122,22 @@ def generate(
         console.print(
             "[green]✓[/green] Generated: assets/generated/navx-card.svg"
         )
+        generate_svg(
+            profile=profile,
+            template_path=Path("templates/qfield-card.svg.j2"),
+            output_path=Path("assets/generated/qfield-card.svg"),
+        )
+        console.print(
+            "[green]✓[/green] Generated: assets/generated/qfield-card.svg"
+        )
+        generate_svg(
+            profile=profile,
+            template_path=Path("templates/vision-pipeline-card.svg.j2"),
+            output_path=Path("assets/generated/vision-pipeline-card.svg"),
+        )
+        console.print(
+            "[green]✓[/green] Generated: assets/generated/vision-pipeline-card.svg"
+        )
         generate_navx_viewer(
             profile=profile,
             template_path=Path("templates/navx-viewer.html.j2"),
