@@ -1,0 +1,146 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+    aria-labelledby="title description">
+    <title id="title">NAVX interactive 3D model</title>
+
+    <desc id="description">
+        Explore the NAVX high-precision GNSS receiver in an interactive 3D viewer.
+    </desc>
+
+    <defs>
+        <linearGradient id="background" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0D1117" />
+            <stop offset="1" stop-color="#161B22" />
+        </linearGradient>
+
+        <linearGradient id="accent" x1="90" y1="0" x2="1100" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#58A6FF" />
+            <stop offset="0.55" stop-color="#A371F7" />
+            <stop offset="1" stop-color="#3FB950" />
+        </linearGradient>
+
+        <filter id="soft-glow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="9" result="blur" />
+
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+
+    <style>
+        .card-border {
+            fill: none;
+            stroke: #30363d;
+            stroke-width: 2;
+            transition:
+                stroke 0.25s ease,
+                filter 0.25s ease;
+        }
+
+        .cta {
+            fill: #21262d;
+            stroke: #30363d;
+            stroke-width: 2;
+            transition:
+                fill 0.25s ease,
+                stroke 0.25s ease,
+                filter 0.25s ease;
+        }
+
+        .arrow-line,
+        .arrow-head {
+            stroke: #58a6ff;
+            stroke-width: 3;
+            transition:
+                stroke 0.25s ease,
+                stroke-width 0.25s ease;
+        }
+
+        svg:hover .card-border {
+            stroke: #58a6ff;
+            filter: url(#soft-glow);
+        }
+
+        svg:hover .cta {
+            fill: #1f2937;
+            stroke: #58a6ff;
+            filter: url(#soft-glow);
+        }
+
+        svg:hover .arrow-line,
+        svg:hover .arrow-head {
+            stroke: #79c0ff;
+            stroke-width: 4;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .card-border,
+            .cta,
+            .arrow-line,
+            .arrow-head {
+                transition: none;
+            }
+        }
+    </style>
+
+    <rect width="1200" height="360" rx="28" fill="url(#background)" />
+
+    <rect class="card-border" x="1" y="1" width="1198" height="358" rx="27" />
+
+    <text x="76" y="60" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
+        font-size="21">
+        &gt; interactive_product_viewer
+    </text>
+
+    <text x="76" y="132" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="54"
+        font-weight="700">
+        NAVX
+    </text>
+
+    <text x="76" y="178" fill="url(#accent)" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="27"
+        font-weight="600">
+        High-precision GNSS receiver
+    </text>
+
+    <text x="76" y="225" fill="#C9D1D9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21">
+        Explore the product in 3D · rotate · zoom · inspect
+    </text>
+
+    <!-- CTA button -->
+
+    <rect class="cta" x="76" y="268" width="300" height="58" rx="14" />
+
+    <text x="100" y="305" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18"
+        font-weight="700">
+        Open interactive viewer
+    </text>
+
+    <!--
+    Arrow coordinates are absolute.
+    No SVG transform and no CSS transform are used,
+    preventing the arrow from jumping to the top-left on hover.
+  -->
+
+    <path class="arrow-line" d="M330 297H350" stroke-linecap="round" />
+
+    <path class="arrow-head" d="M343 290L350 297L343 304" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Decorative product representation -->
+
+    <g opacity="0.35" transform="translate(785 82)">
+        <rect x="0" y="0" width="270" height="190" rx="26" stroke="#58A6FF" stroke-width="3" />
+
+        <rect x="38" y="42" width="194" height="106" rx="18" stroke="#A371F7" stroke-width="3" />
+
+        <circle cx="135" cy="95" r="30" stroke="#3FB950" stroke-width="3" />
+
+        <path d="M135 65V28M135 162V125M105 95H68M202 95H165" stroke="#58A6FF" stroke-width="3"
+            stroke-linecap="round" />
+
+        <path d="M106 66L164 124M164 66L106 124" stroke="#A371F7" stroke-width="3" stroke-linecap="round" />
+
+        <path d="M88 162C108 182 162 182 182 162" stroke="#3FB950" stroke-width="3" stroke-linecap="round" />
+    </g>
+</svg>
