@@ -1,0 +1,450 @@
+<svg width="1200" height="340" viewBox="0 0 1200 340" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+    aria-labelledby="title description">
+    <title id="title">End-to-end robotic product engineering</title>
+
+    <desc id="description">
+        Animated engineering workflow from idea to industrial product.
+    </desc>
+
+    <defs>
+        <linearGradient id="background" x1="0" y1="0" x2="1200" y2="340" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0D1117" />
+            <stop offset="1" stop-color="#161B22" />
+        </linearGradient>
+
+        <linearGradient id="active-gradient" x1="70" y1="0" x2="1130" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#58A6FF" />
+            <stop offset="0.5" stop-color="#A371F7" />
+            <stop offset="1" stop-color="#3FB950" />
+        </linearGradient>
+
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="5" result="blur" />
+
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+
+    <style>
+        .node-box {
+            fill: #161b22;
+            stroke: #30363d;
+            stroke-width: 2;
+
+            animation-name: activate-box;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-fill-mode: backwards;
+        }
+
+        .node-icon {
+            fill: #8b949e;
+            font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+            font-size: 27px;
+            text-anchor: middle;
+
+            animation-name: activate-text;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-fill-mode: backwards;
+        }
+
+        .node-label {
+            fill: #8b949e;
+            font-family: Inter, "Segoe UI", Arial, sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            text-anchor: middle;
+
+            animation-name: activate-text;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-fill-mode: backwards;
+        }
+
+        .node-label-small {
+            font-size: 13px;
+        }
+
+        .node {
+            transform-box: fill-box;
+            transform-origin: center;
+
+            animation-name: activate-node;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-fill-mode: backwards;
+        }
+
+        .connector {
+            stroke: #30363d;
+            stroke-width: 4;
+            stroke-linecap: round;
+        }
+
+        .connector-progress {
+            stroke: url(#active-gradient);
+            stroke-width: 4;
+            stroke-linecap: round;
+            stroke-dasharray: 24;
+            stroke-dashoffset: 24;
+            filter: url(#glow);
+
+            animation-name: activate-connector;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-fill-mode: backwards;
+        }
+
+        /*
+     * Each node and each of its animated children receive the same delay.
+     * This ensures that scaling, blue border and white text stay synchronized.
+     */
+
+        .node-1,
+        .node-1 .node-box,
+        .node-1 .node-icon,
+        .node-1 .node-label {
+            animation-delay: 0s;
+        }
+
+        .node-2,
+        .node-2 .node-box,
+        .node-2 .node-icon,
+        .node-2 .node-label {
+            animation-delay: 0.5s;
+        }
+
+        .node-3,
+        .node-3 .node-box,
+        .node-3 .node-icon,
+        .node-3 .node-label {
+            animation-delay: 1s;
+        }
+
+        .node-4,
+        .node-4 .node-box,
+        .node-4 .node-icon,
+        .node-4 .node-label {
+            animation-delay: 1.5s;
+        }
+
+        .node-5,
+        .node-5 .node-box,
+        .node-5 .node-icon,
+        .node-5 .node-label {
+            animation-delay: 2s;
+        }
+
+        .node-6,
+        .node-6 .node-box,
+        .node-6 .node-icon,
+        .node-6 .node-label {
+            animation-delay: 2.5s;
+        }
+
+        .node-7,
+        .node-7 .node-box,
+        .node-7 .node-icon,
+        .node-7 .node-label {
+            animation-delay: 3s;
+        }
+
+        .node-8,
+        .node-8 .node-box,
+        .node-8 .node-icon,
+        .node-8 .node-label {
+            animation-delay: 3.5s;
+        }
+
+        .connector-1 {
+            animation-delay: 0.25s;
+        }
+
+        .connector-2 {
+            animation-delay: 0.75s;
+        }
+
+        .connector-3 {
+            animation-delay: 1.25s;
+        }
+
+        .connector-4 {
+            animation-delay: 1.75s;
+        }
+
+        .connector-5 {
+            animation-delay: 2.25s;
+        }
+
+        .connector-6 {
+            animation-delay: 2.75s;
+        }
+
+        .connector-7 {
+            animation-delay: 3.2s5s;
+        }
+
+        @keyframes activate-box {
+
+            0%,
+            12.5%,
+            100% {
+                fill: #161b22;
+                stroke: #30363d;
+                stroke-width: 2;
+                filter: none;
+            }
+
+            2%,
+            10% {
+                fill: #161b22;
+                stroke: #58a6ff;
+                stroke-width: 3;
+                filter: url(#glow);
+            }
+        }
+
+        @keyframes activate-text {
+
+            0%,
+            12.5%,
+            100% {
+                fill: #8b949e;
+            }
+
+            2%,
+            10% {
+                fill: #f0f6fc;
+            }
+        }
+
+        @keyframes activate-node {
+
+            0%,
+            12.5%,
+            100% {
+                transform: translateY(0) scale(1);
+            }
+
+            2%,
+            10% {
+                transform: translateY(-6px) scale(1.06);
+            }
+        }
+
+        @keyframes activate-connector {
+            0% {
+                stroke-dashoffset: 24;
+                opacity: 0;
+            }
+
+            2% {
+                opacity: 1;
+            }
+
+            8%,
+            10% {
+                stroke-dashoffset: 0;
+                opacity: 1;
+            }
+
+            12.5%,
+            100% {
+                stroke-dashoffset: -24;
+                opacity: 0;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .node,
+            .node-box,
+            .node-icon,
+            .node-label,
+            .connector-progress {
+                animation: none;
+            }
+
+            .node {
+                transform: none;
+            }
+
+            .node-box {
+                fill: #161b22;
+                stroke: #30363d;
+                stroke-width: 2;
+                filter: none;
+            }
+
+            .node-label,
+            .node-icon {
+                fill: #8b949e;
+            }
+
+            .connector-progress {
+                display: none;
+            }
+        }
+    </style>
+
+    <!-- Background -->
+
+    <rect width="1200" height="340" rx="28" fill="url(#background)" />
+
+    <rect x="1" y="1" width="1198" height="338" rx="27" stroke="#30363D" stroke-width="2" />
+
+    <!-- Header -->
+
+    <text x="70" y="58" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
+        font-size="22">
+        &gt; product_engineering_pipeline
+    </text>
+
+    <text x="70" y="92" fill="#C9D1D9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19">
+        Building complete robotic products from concept to deployment.
+    </text>
+
+    <!-- Static connectors -->
+
+    <line class="connector" x1="188" y1="195" x2="212" y2="195" />
+    <line class="connector" x1="318" y1="195" x2="342" y2="195" />
+    <line class="connector" x1="448" y1="195" x2="472" y2="195" />
+    <line class="connector" x1="578" y1="195" x2="602" y2="195" />
+    <line class="connector" x1="708" y1="195" x2="732" y2="195" />
+    <line class="connector" x1="838" y1="195" x2="862" y2="195" />
+    <line class="connector" x1="968" y1="195" x2="992" y2="195" />
+
+    <!-- Animated connectors -->
+
+    <line class="connector-progress connector-1" x1="188" y1="195" x2="212" y2="195" />
+
+    <line class="connector-progress connector-2" x1="318" y1="195" x2="342" y2="195" />
+
+    <line class="connector-progress connector-3" x1="448" y1="195" x2="472" y2="195" />
+
+    <line class="connector-progress connector-4" x1="578" y1="195" x2="602" y2="195" />
+
+    <line class="connector-progress connector-5" x1="708" y1="195" x2="732" y2="195" />
+
+    <line class="connector-progress connector-6" x1="838" y1="195" x2="862" y2="195" />
+
+    <line class="connector-progress connector-7" x1="968" y1="195" x2="992" y2="195" />
+
+    <!-- Nodes -->
+
+    <g class="node node-1">
+        <rect class="node-box" x="70" y="140" width="118" height="110" rx="18" />
+
+        <text class="node-icon" x="129" y="187">
+            💡
+        </text>
+
+        <text class="node-label" x="129" y="224">
+            Idea
+        </text>
+    </g>
+
+    <g class="node node-2">
+        <rect class="node-box" x="212" y="140" width="106" height="110" rx="18" />
+
+        <text class="node-icon" x="265" y="187">
+            📐
+        </text>
+
+        <text class="node-label" x="265" y="216">
+            <tspan x="265">System</tspan>
+            <tspan x="265" dy="19">Design</tspan>
+        </text>
+    </g>
+
+    <g class="node node-3">
+        <rect class="node-box" x="342" y="140" width="106" height="110" rx="18" />
+
+        <text class="node-icon" x="395" y="187">
+            ⚡
+        </text>
+
+        <text class="node-label node-label-small" x="395" y="224">
+            Electronics
+        </text>
+    </g>
+
+    <g class="node node-4">
+        <rect class="node-box" x="472" y="140" width="106" height="110" rx="18" />
+
+        <text class="node-icon" x="525" y="187">
+            ⚙️
+        </text>
+
+        <text class="node-label node-label-small" x="525" y="216">
+            <tspan x="525">Embedded</tspan>
+            <tspan x="525" dy="18">Firmware</tspan>
+        </text>
+    </g>
+
+    <g class="node node-5">
+        <rect class="node-box" x="602" y="140" width="106" height="110" rx="18" />
+
+        <text class="node-icon" x="655" y="187">
+            👁
+        </text>
+
+        <text class="node-label" x="655" y="224">
+            Vision
+        </text>
+    </g>
+
+    <g class="node node-6">
+        <rect class="node-box" x="732" y="140" width="106" height="110" rx="18" />
+
+        <text class="node-icon" x="785" y="187">
+            🧠
+        </text>
+
+        <text class="node-label" x="785" y="216">
+            <tspan x="785">AI</tspan>
+            <tspan x="785" dy="19">Inference</tspan>
+        </text>
+    </g>
+
+    <g class="node node-7">
+        <rect class="node-box" x="862" y="140" width="106" height="110" rx="18" />
+
+        <text class="node-icon" x="915" y="187">
+            ☁️
+        </text>
+
+        <text class="node-label" x="915" y="216">
+            <tspan x="915">Backend</tspan>
+            <tspan x="915" dy="19">&amp; Apps</tspan>
+        </text>
+    </g>
+
+    <g class="node node-8">
+        <rect class="node-box" x="992" y="140" width="138" height="110" rx="18" />
+
+        <text class="node-icon" x="1061" y="187">
+            🚀
+        </text>
+
+        <text class="node-label" x="1061" y="224">
+            Product
+        </text>
+    </g>
+
+    <!-- Footer -->
+
+    <text x="600" y="300" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
+        font-size="16" text-anchor="middle">
+        hardware + embedded + AI + software + industrialization
+    </text>
+</svg>
