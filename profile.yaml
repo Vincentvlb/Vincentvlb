@@ -24,14 +24,11 @@ engineering_domains:
     - Industrial cameras
 
   computer_vision:
-    - YOLOv26
-    - YOLOv26 Pose
+    - YOLOv26 & Pose
     - Custom model training
-    - Label Studio
-    - Auto-labeling
+    - Label Studio & Auto-labeling
     - ONNX
     - TensorRT
-    - DeepStream
     - GStreamer
     - WebRTC
 
@@ -39,11 +36,8 @@ engineering_domains:
     - STM32
     - Embedded firmware
     - KiCad
-    - PCB design
-    - Power electronics
-    - Stepper motor control
-    - VESC integration
-    - CAN bus
+    - Stepper an brushless motor control
+    - CAN
     - UART
     - Ethernet
     - USB

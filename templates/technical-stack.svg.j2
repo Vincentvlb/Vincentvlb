@@ -102,7 +102,7 @@
     <rect x="70" y="176" width="1060" height="26" fill="#1c2128" />
 
     <!-- Column separator -->
-    <line x1="300" y1="150" x2="300" y2="470" class="col-separator" />
+    <line x1="320" y1="150" x2="320" y2="470" class="col-separator" />
 
     <!-- Row separators -->
     <line x1="70" y1="202" x2="1130" y2="202" class="row-separator" />
@@ -113,35 +113,35 @@
 
     <!-- Header text -->
     <text x="100" y="183" class="col-title">Domain</text>
-    <text x="330" y="183" class="col-title">Technologies</text>
+    <text x="350" y="183" class="col-title">Technologies</text>
 
     <!-- Row 1 -->
     <text x="100" y="237" class="domain">Robotics</text>
-    <text x="330" y="237" class="tech">
+    <text x="350" y="237" class="tech">
         {{ profile.engineering_domains.robotics | join(" · ") }}
     </text>
 
     <!-- Row 2 -->
     <text x="100" y="291" class="domain">Computer vision &amp; AI</text>
-    <text x="330" y="291" class="tech">
+    <text x="350" y="291" class="tech">
         {{ profile.engineering_domains.computer_vision | join(" · ") }}
     </text>
 
     <!-- Row 3 -->
     <text x="100" y="345" class="domain">Embedded &amp; electronics</text>
-    <text x="330" y="345" class="tech">
+    <text x="350" y="345" class="tech">
         {{ profile.engineering_domains.embedded_systems | join(" · ") }}
     </text>
 
     <!-- Row 4 -->
     <text x="100" y="399" class="domain">Software</text>
-    <text x="330" y="399" class="tech">
+    <text x="350" y="399" class="tech">
         {{ profile.engineering_domains.software | join(" · ") }}
     </text>
 
     <!-- Row 5 -->
     <text x="100" y="453" class="domain">Infrastructure</text>
-    <text x="330" y="453" class="tech">
+    <text x="350" y="453" class="tech">
         {{ profile.engineering_domains.infrastructure | join(" · ") }}
     </text>
 </svg>

@@ -108,7 +108,7 @@
     <rect x="70" y="176" width="1060" height="26" fill="#1c2128" />
 
     <!-- Column separator -->
-    <line x1="300" y1="150" x2="300" y2="470" class="col-separator" />
+    <line x1="320" y1="150" x2="320" y2="470" class="col-separator" />
 
     <!-- Row separators -->
     <line x1="70" y1="202" x2="1130" y2="202" class="row-separator" />
@@ -119,35 +119,35 @@
 
     <!-- Header text -->
     <text x="100" y="183" class="col-title">Domain</text>
-    <text x="330" y="183" class="col-title">Technologies</text>
+    <text x="350" y="183" class="col-title">Technologies</text>
 
     <!-- Row 1 -->
     <text x="100" y="237" class="domain">Robotics</text>
-    <text x="330" y="237" class="tech">
+    <text x="350" y="237" class="tech">
         ROS 2 · Navigation · RTK GNSS · Jetson Orin · Industrial cameras
     </text>
 
     <!-- Row 2 -->
     <text x="100" y="291" class="domain">Computer vision &amp; AI</text>
-    <text x="330" y="291" class="tech">
-        YOLOv26 · YOLOv26 Pose · Custom model training · Label Studio · Auto-labeling · ONNX · TensorRT · DeepStream · GStreamer · WebRTC
+    <text x="350" y="291" class="tech">
+        YOLOv26 &amp; Pose · Custom model training · Label Studio &amp; Auto-labeling · ONNX · TensorRT · GStreamer · WebRTC
     </text>
 
     <!-- Row 3 -->
     <text x="100" y="345" class="domain">Embedded &amp; electronics</text>
-    <text x="330" y="345" class="tech">
-        STM32 · Embedded firmware · KiCad · PCB design · Power electronics · Stepper motor control · VESC integration · CAN bus · UART · Ethernet · USB
+    <text x="350" y="345" class="tech">
+        STM32 · Embedded firmware · KiCad · Stepper an brushless motor control · CAN · UART · Ethernet · USB
     </text>
 
     <!-- Row 4 -->
     <text x="100" y="399" class="domain">Software</text>
-    <text x="330" y="399" class="tech">
+    <text x="350" y="399" class="tech">
         Python · C++ · Java · HTML · JavaScript · CSS · SQL · Flask · FastAPI · Angular · Django · React · Capacitor
     </text>
 
     <!-- Row 5 -->
     <text x="100" y="453" class="domain">Infrastructure</text>
-    <text x="330" y="453" class="tech">
+    <text x="350" y="453" class="tech">
         macOS · Linux · VS Code · Git · Docker · GitHub Actions · Proxmox · Ollama · Local LLMs
     </text>
 </svg>
