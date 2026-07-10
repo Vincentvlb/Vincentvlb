@@ -34,7 +34,8 @@ class EngineeringHighlight(BaseModel):
     details: list[str]
     impact: str | None = None
     url: str | None = None
-
+    viewer_url: str | None = None
+    
 
 class Profile(BaseModel):
     identity: Identity
