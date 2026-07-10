@@ -7,6 +7,7 @@ from rich.console import Console
 
 from github_profile.generators.readme import generate_readme
 from github_profile.loader import load_profile
+from github_profile.generators.svg import generate_svg
 
 app = typer.Typer(
     name="profile",
@@ -81,11 +82,17 @@ def generate(
             template_path=template,
             output_path=output,
         )
+        generate_svg(
+            profile=profile,
+            template_path=Path("templates/hero.svg.j2"),
+            output_path=Path("assets/generated/hero.svg"),
+        )
     except (FileNotFoundError, TemplateError) as error:
         console.print(f"[red]✗ Generation failed:[/red] {error}")
         raise typer.Exit(code=1) from error
 
     console.print(f"[green]✓[/green] Generated: {output}")
+    console.print("[green]✓[/green] Generated: assets/generated/hero.svg")
 
 
 @app.command()

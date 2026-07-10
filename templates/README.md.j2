@@ -5,17 +5,15 @@ Edit profile.yaml or templates/README.md.j2 instead.
 
 <div align="center">
 
-# {{ profile.identity.name }}
-
-### {{ profile.identity.title }}
-
-**{{ profile.identity.tagline }}**
-
-📍 {{ profile.identity.location }}
-
-{{ profile.identity.languages | join(" • ") }}
+<img
+  src="./assets/generated/hero.svg"
+  alt="{{ profile.identity.name }} — {{ profile.identity.title }}"
+  width="100%"
+/>
 
 </div>
+
+<br>
 
 ---
 
