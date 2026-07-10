@@ -1,7 +1,7 @@
 <!--
 This file is generated automatically.
 Edit profile.yaml or the templates instead.
--->
+--> 
 <div align="center"><img
   src="./assets/generated/hero.svg"
   alt="Vincent Lambert — Robotics Engineer • AI • Embedded Systems"
