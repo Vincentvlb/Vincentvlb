@@ -78,3 +78,60 @@ learning:
   enabled: true
   topics:
     - SwiftUI
+
+engineering_highlights:
+  - title: NAVX — High-precision GNSS receiver
+    description: >-
+      An industrial GNSS receiver designed for high-precision positioning
+      in robotics, agriculture and field applications.
+    impact: >-
+      I contributed to the complete product development, including electronics
+      design, PCB design with KiCad, embedded firmware, enclosure design with
+      Fusion 360 and industrialization.
+    url: https://shop.natuition.com/shop/n2168-navx-2678
+    details:
+      - Electronics design
+      - PCB design
+      - Embedded firmware
+      - GNSS integration
+      - Mechanical enclosure
+      - Product industrialization
+
+  - title: QField — Integrated NTRIP client
+    description: >-
+      I contributed an integrated NTRIP client to QField, enabling users to
+      connect an RTK GNSS rover directly to the application and obtain
+      centimeter-level positioning without relying on an external mobile
+      application.
+    impact: >-
+      This feature addressed a highly requested need from the French surveying
+      and research communities and made precise field measurements directly
+      from a smartphone significantly easier.
+    url: https://github.com/opengisch/qfield
+    details:
+      - Open-source contribution
+      - NTRIP client integration
+      - RTK GNSS positioning
+      - Centimeter-level field measurements
+      - Direct rover connectivity
+      - Mobile surveying workflow
+
+  - title: Real-time industrial AI vision pipeline
+    description: >-
+      I design complete real-time computer vision pipelines, from camera,
+      lens and lighting selection to image acquisition, custom dataset creation,
+      model training, TensorRT optimization and deployment on NVIDIA Jetson
+      Orin platforms.
+    impact: >-
+      The objective is not only to run an AI model, but to design the complete
+      imaging and inference system required for reliable real-time operation.
+    details:
+      - Industrial USB and Ethernet cameras
+      - Label Studio
+      - Model-assisted pre-labeling
+      - Custom YOLOv26 and YOLOv26 Pose models
+      - ONNX export
+      - TensorRT optimization
+      - DeepStream and GStreamer pipelines
+      - nvinfer and nvdsosd
+      - WebRTC robot vision streaming

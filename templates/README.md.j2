@@ -58,6 +58,26 @@ MISSION
 {% endif %}
 
 {% if profile.learning.enabled %}
+
+{% if profile.engineering_highlights %}
+## Engineering highlights
+
+{% for highlight in profile.engineering_highlights %}
+### {% if highlight.url %}[{{ highlight.title }}]({{ highlight.url }}){% else %}{{ highlight.title }}{% endif %}
+
+{{ highlight.description }}
+
+{% if highlight.impact %}
+> {{ highlight.impact }}
+{% endif %}
+
+{% for detail in highlight.details %}
+- {{ detail }}
+{% endfor %}
+
+{% endfor %}
+{% endif %}
+
 ## Currently learning
 
 {{ profile.learning.topics | join(" • ") }}

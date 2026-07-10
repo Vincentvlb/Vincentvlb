@@ -28,8 +28,17 @@ class Learning(BaseModel):
     topics: list[str]
 
 
+class EngineeringHighlight(BaseModel):
+    title: str
+    description: str
+    details: list[str]
+    impact: str | None = None
+    url: str | None = None
+
+
 class Profile(BaseModel):
     identity: Identity
     robot_identity: RobotIdentity
     engineering_domains: EngineeringDomains
     learning: Learning
+    engineering_highlights: list[EngineeringHighlight]
