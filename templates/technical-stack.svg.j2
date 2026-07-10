@@ -1,0 +1,140 @@
+<svg width="1200" height="520" viewBox="0 0 1200 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+    aria-labelledby="title description">
+    <title id="title">Technical stack</title>
+
+    <desc id="description">
+        Technical stack covering robotics, computer vision and AI,
+        embedded systems and electronics, software, and infrastructure.
+    </desc>
+
+    <defs>
+        <linearGradient id="background" x1="0" y1="0" x2="1200" y2="520" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0D1117" />
+            <stop offset="1" stop-color="#161B22" />
+        </linearGradient>
+
+        <linearGradient id="accent" x1="70" y1="0" x2="1130" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#58A6FF" />
+            <stop offset="0.5" stop-color="#A371F7" />
+            <stop offset="1" stop-color="#3FB950" />
+        </linearGradient>
+    </defs>
+
+    <style>
+        .header-label {
+            fill: #8b949e;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 22px;
+        }
+
+        .title {
+            fill: url(#accent);
+            font-family: Inter, "Segoe UI", Arial, sans-serif;
+            font-size: 34px;
+            font-weight: 700;
+        }
+
+        .table-outline {
+            fill: #161b22;
+            stroke: #30363d;
+            stroke-width: 2;
+        }
+
+        .table-header {
+            fill: #1c2128;
+            stroke: #30363d;
+            stroke-width: 1;
+        }
+
+        .row-separator,
+        .col-separator {
+            stroke: #30363d;
+            stroke-width: 1;
+        }
+
+        .col-title {
+            fill: #f0f6fc;
+            font-family: Inter, "Segoe UI", Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .domain {
+            fill: #79c0ff;
+            font-family: Inter, "Segoe UI", Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .tech {
+            fill: #c9d1d9;
+            font-family: Inter, "Segoe UI", Arial, sans-serif;
+            font-size: 15px;
+        }
+    </style>
+
+    <rect width="1200" height="520" rx="28" fill="url(#background)" />
+
+    <rect x="1" y="1" width="1198" height="518" rx="27" stroke="#30363D" stroke-width="2" />
+
+    <text x="70" y="58" class="header-label">
+        &gt; technical_stack
+    </text>
+
+    <text x="70" y="108" class="title">
+        Technologies I use across the stack
+    </text>
+
+    <!-- Table container -->
+    <rect x="70" y="150" width="1060" height="320" rx="18" class="table-outline" />
+
+    <!-- Header row -->
+    <rect x="70" y="150" width="1060" height="52" rx="18" class="table-header" />
+
+    <!-- Square off header bottom -->
+    <rect x="70" y="176" width="1060" height="26" fill="#1c2128" />
+
+    <!-- Column separator -->
+    <line x1="300" y1="150" x2="300" y2="470" class="col-separator" />
+
+    <!-- Row separators -->
+    <line x1="70" y1="202" x2="1130" y2="202" class="row-separator" />
+    <line x1="70" y1="256" x2="1130" y2="256" class="row-separator" />
+    <line x1="70" y1="310" x2="1130" y2="310" class="row-separator" />
+    <line x1="70" y1="364" x2="1130" y2="364" class="row-separator" />
+    <line x1="70" y1="418" x2="1130" y2="418" class="row-separator" />
+
+    <!-- Header text -->
+    <text x="100" y="183" class="col-title">Domain</text>
+    <text x="330" y="183" class="col-title">Technologies</text>
+
+    <!-- Row 1 -->
+    <text x="100" y="237" class="domain">Robotics</text>
+    <text x="330" y="237" class="tech">
+        {{ profile.engineering_domains.robotics | join(" · ") }}
+    </text>
+
+    <!-- Row 2 -->
+    <text x="100" y="291" class="domain">Computer vision &amp; AI</text>
+    <text x="330" y="291" class="tech">
+        {{ profile.engineering_domains.computer_vision | join(" · ") }}
+    </text>
+
+    <!-- Row 3 -->
+    <text x="100" y="345" class="domain">Embedded &amp; electronics</text>
+    <text x="330" y="345" class="tech">
+        {{ profile.engineering_domains.embedded_systems | join(" · ") }}
+    </text>
+
+    <!-- Row 4 -->
+    <text x="100" y="399" class="domain">Software</text>
+    <text x="330" y="399" class="tech">
+        {{ profile.engineering_domains.software | join(" · ") }}
+    </text>
+
+    <!-- Row 5 -->
+    <text x="100" y="453" class="domain">Infrastructure</text>
+    <text x="330" y="453" class="tech">
+        {{ profile.engineering_domains.infrastructure | join(" · ") }}
+    </text>
+</svg>

@@ -108,6 +108,14 @@ def generate(
         )
         generate_svg(
             profile=profile,
+            template_path=Path("templates/technical-stack.svg.j2"),
+            output_path=Path("assets/generated/technical-stack.svg"),
+        )
+        console.print(
+            "[green]✓[/green] Generated: assets/generated/technical-stack.svg"
+        )
+        generate_svg(
+            profile=profile,
             template_path=Path("templates/navx-card.svg.j2"),
             output_path=Path("assets/generated/navx-card.svg"),
         )

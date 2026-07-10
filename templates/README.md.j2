@@ -39,29 +39,17 @@ Edit profile.yaml or the templates instead.
 
 <br>
 
-{% if profile.engineering_domains.enabled %}
-## Engineering domains
+<div align="center">
 
-### Robotics
+<img
+  src="./assets/generated/technical-stack.svg"
+  alt="Technical stack"
+  width="100%"
+/>
 
-{{ profile.engineering_domains.robotics | join(" • ") }}
+</div>
 
-### Computer vision & real-time AI
-
-{{ profile.engineering_domains.computer_vision | join(" • ") }}
-
-### Embedded systems & electronics
-
-{{ profile.engineering_domains.embedded_systems | join(" • ") }}
-
-### Software
-
-{{ profile.engineering_domains.software | join(" • ") }}
-
-### Infrastructure
-
-{{ profile.engineering_domains.infrastructure | join(" • ") }}
-{% endif %}
+<br>
 
 {% if profile.engineering_highlights %}
 ## Engineering highlights
