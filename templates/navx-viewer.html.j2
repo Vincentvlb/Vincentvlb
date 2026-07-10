@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Interactive 3D model of NAVX, a high-precision GNSS receiver.">
+
+    <title>NAVX — Interactive 3D viewer</title>
+
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/@google/model-viewer@4.3.1/dist/model-viewer.min.js"></script>
+
+    <style>
+        :root {
+            color-scheme: dark;
+            font-family:
+                Inter,
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            background: #0d1117;
+            color: #f0f6fc;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: grid;
+            min-height: 100vh;
+            padding: 32px;
+            background:
+                radial-gradient(circle at 20% 20%,
+                    rgba(88, 166, 255, 0.14),
+                    transparent 35%),
+                radial-gradient(circle at 80% 75%,
+                    rgba(163, 113, 247, 0.12),
+                    transparent 35%),
+                #0d1117;
+        }
+
+        .viewer-shell {
+            display: grid;
+            grid-template-rows: auto minmax(480px, 1fr) auto;
+            width: min(1400px, 100%);
+            min-height: calc(100vh - 64px);
+            margin: auto;
+            overflow: hidden;
+            border: 1px solid #30363d;
+            border-radius: 28px;
+            background: rgba(22, 27, 34, 0.92);
+            box-shadow:
+                0 30px 80px rgba(0, 0, 0, 0.35),
+                0 0 45px rgba(88, 166, 255, 0.08);
+        }
+
+        .viewer-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 24px 28px;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .identity {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .terminal-controls {
+            display: flex;
+            gap: 8px;
+        }
+
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 999px;
+        }
+
+        .terminal-dot:nth-child(1) {
+            background: #ff5f56;
+        }
+
+        .terminal-dot:nth-child(2) {
+            background: #ffbd2e;
+        }
+
+        .terminal-dot:nth-child(3) {
+            background: #27c93f;
+        }
+
+        .eyebrow {
+            margin: 0 0 6px;
+            color: #8b949e;
+            font-family:
+                ui-monospace,
+                SFMono-Regular,
+                Menlo,
+                Monaco,
+                Consolas,
+                monospace;
+            font-size: 14px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(26px, 4vw, 42px);
+            line-height: 1.1;
+        }
+
+        .creator {
+            color: #8b949e;
+            font-size: 14px;
+            text-align: right;
+        }
+
+        .creator strong {
+            display: block;
+            margin-bottom: 4px;
+            color: #c9d1d9;
+        }
+
+        .viewer-area {
+            position: relative;
+            min-height: 480px;
+            background:
+                linear-gradient(rgba(88, 166, 255, 0.035) 1px,
+                    transparent 1px),
+                linear-gradient(90deg,
+                    rgba(88, 166, 255, 0.035) 1px,
+                    transparent 1px);
+            background-size: 42px 42px;
+        }
+
+        model-viewer {
+            width: 100%;
+            height: 100%;
+            min-height: 480px;
+            --poster-color: transparent;
+            --progress-bar-color: #58a6ff;
+            --progress-bar-height: 3px;
+        }
+
+        .interaction-hint {
+            position: absolute;
+            right: 22px;
+            bottom: 22px;
+            z-index: 2;
+            margin: 0;
+            padding: 10px 14px;
+            border: 1px solid #30363d;
+            border-radius: 999px;
+            color: #8b949e;
+            background: rgba(13, 17, 23, 0.78);
+            font-family:
+                ui-monospace,
+                SFMono-Regular,
+                Menlo,
+                Monaco,
+                Consolas,
+                monospace;
+            font-size: 13px;
+            backdrop-filter: blur(10px);
+            pointer-events: none;
+        }
+
+        .viewer-footer {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 28px;
+            align-items: center;
+            padding: 24px 28px;
+            border-top: 1px solid #30363d;
+        }
+
+        .description {
+            max-width: 760px;
+            margin: 0;
+            color: #c9d1d9;
+            font-size: 16px;
+            line-height: 1.65;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 42px;
+            padding: 0 18px;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            color: #f0f6fc;
+            background: #21262d;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            border-color: #58a6ff;
+            background: #30363d;
+        }
+
+        .button-primary {
+            border-color: #1f6feb;
+            background: #238636;
+        }
+
+        .button-primary:hover {
+            border-color: #3fb950;
+            background: #2ea043;
+        }
+
+        @media (max-width: 760px) {
+            body {
+                padding: 0;
+            }
+
+            .viewer-shell {
+                min-height: 100vh;
+                border: 0;
+                border-radius: 0;
+            }
+
+            .viewer-header,
+            .viewer-footer {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .viewer-header {
+                align-items: flex-start;
+            }
+
+            .creator {
+                display: none;
+            }
+
+            .viewer-area,
+            model-viewer {
+                min-height: 420px;
+            }
+
+            .actions {
+                width: 100%;
+            }
+
+            .button {
+                flex: 1;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="viewer-shell">
+        <header class="viewer-header">
+            <div class="identity">
+                <div class="terminal-controls" aria-hidden="true">
+                    <span class="terminal-dot"></span>
+                    <span class="terminal-dot"></span>
+                    <span class="terminal-dot"></span>
+                </div>
+
+                <div>
+                    <p class="eyebrow">&gt; product_3d_viewer</p>
+                    <h1>NAVX</h1>
+                </div>
+            </div>
+
+            <div class="creator">
+                <strong>{{ profile.identity.name }}</strong>
+                {{ profile.identity.title }}
+            </div>
+        </header>
+
+        <section class="viewer-area">
+            <model-viewer id="navx-viewer" src="./navx.glb" alt="Interactive 3D model of the NAVX GNSS receiver"
+                camera-controls touch-action="pan-y" orientation="0deg -85deg 160deg" shadow-intensity="1"
+                shadow-softness="1" exposure="0.6" environment-intensity="0" interaction-prompt="auto" loading="eager"
+                auto-rotate auto-rotate-delay="1200" rotation-per-second="-12deg" interaction-prompt-threshold="5000">
+            </model-viewer>
+
+            <p class="interaction-hint">
+                drag to rotate · scroll to zoom
+            </p>
+        </section>
+
+        <footer class="viewer-footer">
+            <p class="description">
+                An industrial GNSS receiver designed for high-precision
+                positioning in robotics, agriculture and field applications.
+            </p>
+
+            <div class="actions">
+                <button id="reset-camera" class="button" type="button">
+                    Reset view
+                </button>
+
+                <a class="button button-primary" href="https://shop.natuition.com/shop/n2168-navx-2678" target="_blank"
+                    rel="noopener noreferrer">
+                    Discover NAVX
+                </a>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        const viewer = document.querySelector("#navx-viewer");
+        const resetButton = document.querySelector("#reset-camera");
+
+        const initialOrientation = "0deg -85deg 160deg";
+        const initialCameraOrbit = "auto auto auto";
+        const initialCameraTarget = "auto auto auto";
+        const initialFieldOfView = "auto";
+
+        resetButton.addEventListener("click", async () => {
+            viewer.orientation = initialOrientation;
+
+            await viewer.updateFraming();
+
+            viewer.cameraOrbit = initialCameraOrbit;
+            viewer.cameraTarget = initialCameraTarget;
+            viewer.fieldOfView = initialFieldOfView;
+
+            viewer.resetTurntableRotation();
+            viewer.jumpCameraToGoal();
+        });
+    </script>
+</body>
+
+</html>

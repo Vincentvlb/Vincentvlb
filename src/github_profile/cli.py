@@ -8,6 +8,7 @@ from rich.console import Console
 from github_profile.generators.readme import generate_readme
 from github_profile.loader import load_profile
 from github_profile.generators.svg import generate_svg
+from github_profile.generators.html import generate_navx_viewer
 
 app = typer.Typer(
     name="profile",
@@ -96,6 +97,18 @@ def generate(
         )
         console.print(
             "[green]✓[/green] Generated: assets/generated/engineering-cycle.svg"
+        )
+        generate_navx_viewer(
+            profile=profile,
+            template_path=Path("templates/navx-viewer.html.j2"),
+            model_path=Path("assets/navx/navx.glb"),
+            output_directory=Path("docs/navx"),
+        )
+        console.print(
+            "[green]✓[/green] Generated: docs/navx/index.html"
+        )
+        console.print(
+            "[green]✓[/green] Copied: docs/navx/navx.glb"
         )
     except (FileNotFoundError, TemplateError) as error:
         console.print(f"[red]✗ Generation failed:[/red] {error}")
