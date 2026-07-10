@@ -1,0 +1,64 @@
+<!--
+This file is generated automatically.
+Edit profile.yaml or templates/README.md.j2 instead.
+-->
+
+<div align="center">
+
+# {{ profile.identity.name }}
+
+### {{ profile.identity.title }}
+
+**{{ profile.identity.tagline }}**
+
+📍 {{ profile.identity.location }}
+
+{{ profile.identity.languages | join(" • ") }}
+
+</div>
+
+---
+
+{% if profile.robot_identity.enabled %}
+## `> system_identity`
+
+~~~text
+NAME       {{ profile.identity.name }}
+ROLE       {{ profile.identity.title }}
+LOCATION   {{ profile.identity.location }}
+LANGUAGES  {{ profile.identity.languages | join(" • ") }}
+
+MISSION
+{{ profile.robot_identity.mission }}
+~~~
+{% endif %}
+
+{% if profile.engineering_domains.enabled %}
+## Engineering domains
+
+### Robotics
+
+{{ profile.engineering_domains.robotics | join(" • ") }}
+
+### Computer vision & real-time AI
+
+{{ profile.engineering_domains.computer_vision | join(" • ") }}
+
+### Embedded systems & electronics
+
+{{ profile.engineering_domains.embedded_systems | join(" • ") }}
+
+### Software
+
+{{ profile.engineering_domains.software | join(" • ") }}
+
+### Infrastructure
+
+{{ profile.engineering_domains.infrastructure | join(" • ") }}
+{% endif %}
+
+{% if profile.learning.enabled %}
+## Currently learning
+
+{{ profile.learning.topics | join(" • ") }}
+{% endif %}

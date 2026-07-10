@@ -1,0 +1,80 @@
+identity:
+  name: Vincent Lambert
+  title: Robotics Engineer • AI • Embedded Systems
+  tagline: Building products, not just software.
+  location: La Rochelle, France
+  languages:
+    - French
+    - English
+
+robot_identity:
+  enabled: true
+  mission: >-
+    Design and build complete robotic products,
+    from system architecture to industrial deployment.
+
+engineering_domains:
+  enabled: true
+
+  robotics:
+    - ROS 2
+    - Navigation
+    - RTK GNSS
+    - Jetson Orin
+    - Industrial cameras
+
+  computer_vision:
+    - YOLOv26
+    - YOLOv26 Pose
+    - Custom model training
+    - Label Studio
+    - Auto-labeling
+    - ONNX
+    - TensorRT
+    - DeepStream
+    - GStreamer
+    - WebRTC
+
+  embedded_systems:
+    - STM32
+    - Embedded firmware
+    - KiCad
+    - PCB design
+    - Power electronics
+    - Stepper motor control
+    - VESC integration
+    - CAN bus
+    - UART
+    - Ethernet
+    - USB
+
+  software:
+    - Python
+    - C++
+    - Java
+    - HTML
+    - JavaScript
+    - CSS
+    - SQL
+    - Flask
+    - FastAPI
+    - Angular
+    - Django
+    - React
+    - Capacitor
+
+  infrastructure:
+    - macOS
+    - Linux
+    - VS Code
+    - Git
+    - Docker
+    - GitHub Actions
+    - Proxmox
+    - Ollama
+    - Local LLMs
+
+learning:
+  enabled: true
+  topics:
+    - SwiftUI
