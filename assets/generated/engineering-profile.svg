@@ -93,15 +93,17 @@
 
     <!-- Header -->
 
-    <text x="70" y="58" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
-        font-size="22">
-        &gt; engineering_capabilities
-    </text>
+    
+<text x="70" y="58" fill="#8B949E"
+    font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="22">
+    &gt; engineering_capabilities
+</text>
 
-    <text x="70" y="108" fill="url(#accent)" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34"
-        font-weight="700">
-        End-to-end robotics engineering
-    </text>
+<text x="70" y="108" fill="url(#accent)" font-family="Inter, Segoe UI, Arial, sans-serif"
+    font-size="34" font-weight="700">
+    End-to-end robotics engineering
+</text>
+
 
     <!-- Capabilities -->
 

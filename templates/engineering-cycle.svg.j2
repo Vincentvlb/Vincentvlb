@@ -1,6 +1,6 @@
 {% from "components/svg-header.j2" import terminal_header %}
 
-<svg width="1200" height="340" viewBox="0 0 1200 340" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+<svg width="1200" height="380" viewBox="0 0 1200 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
     aria-labelledby="title description">
     <title id="title">End-to-end robotic product engineering</title>
 
@@ -9,7 +9,7 @@
     </desc>
 
     <defs>
-        <linearGradient id="background" x1="0" y1="0" x2="1200" y2="340" gradientUnits="userSpaceOnUse">
+        <linearGradient id="background" x1="0" y1="0" x2="1200" y2="380" gradientUnits="userSpaceOnUse">
             <stop stop-color="#0D1117" />
             <stop offset="1" stop-color="#161B22" />
         </linearGradient>
@@ -300,20 +300,16 @@
 
     <!-- Background -->
 
-    <rect width="1200" height="340" rx="28" fill="url(#background)" />
+    <rect width="1200" height="380" rx="28" fill="url(#background)" />
 
-    <rect x="1" y="1" width="1198" height="338" rx="27" stroke="#30363D" stroke-width="2" />
+    <rect x="1" y="1" width="1198" height="378" rx="27" stroke="#30363D" stroke-width="2" />
 
     <!-- Header -->
 
     {{ terminal_header(
     "product_engineering_pipeline",
-    label_y=58
+    "Building complete robotic products"
     ) }}
-
-    <text x="70" y="92" fill="#C9D1D9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19">
-        Building complete robotic products from concept to deployment.
-    </text>
 
     <!-- Static connectors -->
 
@@ -445,8 +441,14 @@
 
     <!-- Footer -->
 
-    <text x="600" y="300" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
-        font-size="16" text-anchor="middle">
-        hardware + embedded + AI + software + industrialization
+    <line x1="70" y1="280" x2="1130" y2="280" stroke="#30363D" stroke-width="2" />
+
+    <text x="70" y="307" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
+        font-size="16">
+        MISSION
+    </text>
+
+    <text x="70" y="350" fill="#C9D1D9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21">
+        {{ profile.robot_identity.mission }}
     </text>
 </svg>

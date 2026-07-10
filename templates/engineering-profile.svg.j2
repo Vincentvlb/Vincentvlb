@@ -1,3 +1,4 @@
+{% from "components/svg-header.j2" import terminal_header %}
 <svg width="1200" height="430" viewBox="0 0 1200 430" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
     aria-labelledby="title description">
     <title id="title">Engineering capabilities</title>
@@ -93,15 +94,10 @@
 
     <!-- Header -->
 
-    <text x="70" y="58" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
-        font-size="22">
-        &gt; engineering_capabilities
-    </text>
-
-    <text x="70" y="108" fill="url(#accent)" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34"
-        font-weight="700">
-        End-to-end robotics engineering
-    </text>
+    {{ terminal_header(
+    "engineering_capabilities",
+    "End-to-end robotics engineering"
+    ) }}
 
     <!-- Capabilities -->
 
