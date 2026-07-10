@@ -74,11 +74,6 @@ engineering_domains:
     - Ollama
     - Local LLMs
 
-learning:
-  enabled: true
-  topics:
-    - SwiftUI
-
 engineering_highlights:
   - title: NAVX — High-precision GNSS receiver
     description: >-

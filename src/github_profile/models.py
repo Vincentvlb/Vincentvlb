@@ -23,11 +23,6 @@ class EngineeringDomains(BaseModel):
     infrastructure: list[str]
 
 
-class Learning(BaseModel):
-    enabled: bool = True
-    topics: list[str]
-
-
 class EngineeringHighlight(BaseModel):
     title: str
     description: str
@@ -41,5 +36,4 @@ class Profile(BaseModel):
     identity: Identity
     robot_identity: RobotIdentity
     engineering_domains: EngineeringDomains
-    learning: Learning
     engineering_highlights: list[EngineeringHighlight]

@@ -27,19 +27,6 @@ Edit profile.yaml or the templates instead.
 
 <br>
 
-{% if profile.robot_identity.enabled %}
-## `> system_identity`
-
-~~~text
-NAME       {{ profile.identity.name }}
-ROLE       {{ profile.identity.title }}
-LOCATION   {{ profile.identity.location }}
-LANGUAGES  {{ profile.identity.languages | join(" • ") }}
-
-MISSION
-{{ profile.robot_identity.mission }}
-~~~
-{% endif %}
 
 {% if profile.engineering_domains.enabled %}
 ## Engineering domains
@@ -78,7 +65,13 @@ MISSION
 {% endif %}
 
 {% if highlight.viewer_url %}
-[Explore the interactive 3D model →]({{ highlight.viewer_url }})
+<a href="{{ highlight.viewer_url }}">
+  <img
+    src="./assets/generated/navx-card.svg"
+    alt="Explore the interactive 3D model of NAVX"
+    width="100%"
+  />
+</a>
 {% endif %}
 
 {% for detail in highlight.details %}
@@ -86,10 +79,4 @@ MISSION
 {% endfor %}
 
 {% endfor %}
-{% endif %}
-
-{% if profile.learning.enabled %}
-## Currently learning
-
-{{ profile.learning.topics | join(" • ") }}
 {% endif %}
