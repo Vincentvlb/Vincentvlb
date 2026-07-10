@@ -19,6 +19,12 @@
             <stop offset="1" stop-color="#3FB950" />
         </linearGradient>
 
+        <linearGradient id="accent2" x1="80" y1="0" x2="1120" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#3FB950" />
+            <stop offset="0.55" stop-color="#58A6FF" />
+            <stop offset="1" stop-color="#A371F7" />
+        </linearGradient>
+
         <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
             <feGaussianBlur stdDeviation="8" result="blur" />
             <feMerge>
@@ -106,7 +112,7 @@
         NavX projet
     </text>
 
-    <text x="70" y="218" fill="url(#accent)" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="27"
+    <text x="70" y="218" fill="url(#accent2)" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="27"
         font-weight="600">
         High-precision GNSS receiver
     </text>
