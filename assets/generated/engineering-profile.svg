@@ -19,9 +19,8 @@
             <stop offset="1" stop-color="#3FB950" />
         </linearGradient>
 
-        <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
-            <feGaussianBlur stdDeviation="6" result="blur" />
-
+        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
             <feMerge>
                 <feMergeNode in="blur" />
                 <feMergeNode in="SourceGraphic" />
@@ -100,7 +99,7 @@
 </text>
 
 <text x="70" y="108" fill="url(#accent)" font-family="Inter, Segoe UI, Arial, sans-serif"
-    font-size="34" font-weight="700">
+    font-size="34" font-weight="700" filter="url(#glow)">
     End-to-end robotics engineering
 </text>
 

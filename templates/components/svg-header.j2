@@ -19,7 +19,7 @@ title_size=34
 
 {% if title %}
 <text x="70" y="{{ title_y }}" fill="url(#accent)" font-family="Inter, Segoe UI, Arial, sans-serif"
-    font-size="{{ title_size }}" font-weight="700">
+    font-size="{{ title_size }}" font-weight="700" filter="url(#glow)">
     {{ title }}
 </text>
 {% endif %}
