@@ -1,3 +1,5 @@
+{% from "components/svg-header.j2" import terminal_header %}
+
 <svg width="1200" height="400" viewBox="0 0 1200 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
     aria-labelledby="title description">
     <title id="title">Real-time industrial AI vision pipeline</title>
@@ -72,15 +74,12 @@
 
     <rect class="card-border" x="1" y="1" width="1198" height="398" rx="27" />
 
-    <text x="70" y="58" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
-        font-size="21">
-        &gt; real_time_ai_vision_pipeline
-    </text>
-
-    <text x="70" y="112" fill="url(#accent)" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34"
-        font-weight="700">
-        From industrial imaging to deployed AI inference
-    </text>
+    {{ terminal_header(
+    "real_time_ai_vision_pipeline",
+    "From industrial imaging to deployed AI inference",
+    label_y=58,
+    title_y=112
+    ) }}
 
     <text x="70" y="150" fill="#C9D1D9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18">
         Camera · lens · lighting · datasets · training · TensorRT · DeepStream · WebRTC

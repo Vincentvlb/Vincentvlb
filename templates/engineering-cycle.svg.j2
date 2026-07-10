@@ -1,3 +1,5 @@
+{% from "components/svg-header.j2" import terminal_header %}
+
 <svg width="1200" height="340" viewBox="0 0 1200 340" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
     aria-labelledby="title description">
     <title id="title">End-to-end robotic product engineering</title>
@@ -190,7 +192,7 @@
         }
 
         .connector-7 {
-            animation-delay: 3.2s5s;
+            animation-delay: 3.25s;
         }
 
         @keyframes activate-box {
@@ -304,10 +306,10 @@
 
     <!-- Header -->
 
-    <text x="70" y="58" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
-        font-size="22">
-        &gt; product_engineering_pipeline
-    </text>
+    {{ terminal_header(
+    "product_engineering_pipeline",
+    label_y=58
+    ) }}
 
     <text x="70" y="92" fill="#C9D1D9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19">
         Building complete robotic products from concept to deployment.

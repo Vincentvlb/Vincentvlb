@@ -1,3 +1,5 @@
+{% from "components/svg-header.j2" import terminal_header %}
+
 <svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
     aria-labelledby="title description">
     <title id="title">QField integrated NTRIP client</title>
@@ -71,10 +73,10 @@
 
     <rect class="card-border" x="1" y="1" width="1198" height="358" rx="27" />
 
-    <text x="76" y="58" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
-        font-size="21">
-        &gt; open_source_contribution
-    </text>
+    {{ terminal_header(
+    "open_source_contribution",
+    label_y=58
+    ) }}
 
     <text x="76" y="126" fill="#F0F6FC" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="44"
         font-weight="700">

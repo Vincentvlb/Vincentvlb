@@ -1,0 +1,26 @@
+{% macro terminal_header(
+label,
+title="",
+show_window_controls=false,
+label_y=58,
+title_y=108,
+title_size=34
+) %}
+{% if show_window_controls %}
+<circle cx="54" cy="36" r="7" fill="#FF5F56" />
+<circle cx="80" cy="36" r="7" fill="#FFBD2E" />
+<circle cx="106" cy="36" r="7" fill="#27C93F" />
+{% endif %}
+
+<text x="70" y="{{ label_y }}" fill="#8B949E"
+    font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="22">
+    &gt; {{ label }}
+</text>
+
+{% if title %}
+<text x="70" y="{{ title_y }}" fill="url(#accent)" font-family="Inter, Segoe UI, Arial, sans-serif"
+    font-size="{{ title_size }}" font-weight="700">
+    {{ title }}
+</text>
+{% endif %}
+{% endmacro %}

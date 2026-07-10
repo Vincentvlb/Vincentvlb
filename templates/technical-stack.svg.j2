@@ -1,3 +1,5 @@
+{% from "components/svg-header.j2" import terminal_header %}
+
 <svg width="1200" height="520" viewBox="0 0 1200 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
     aria-labelledby="title description">
     <title id="title">Technical stack</title>
@@ -77,13 +79,10 @@
 
     <rect x="1" y="1" width="1198" height="518" rx="27" stroke="#30363D" stroke-width="2" />
 
-    <text x="70" y="58" class="header-label">
-        &gt; technical_stack
-    </text>
-
-    <text x="70" y="108" class="title">
-        Technologies I use across the stack
-    </text>
+    {{ terminal_header(
+    "technical_stack",
+    "Technologies I use across the stack"
+    ) }}
 
     <!-- Table container -->
     <rect x="70" y="150" width="1060" height="320" rx="18" class="table-outline" />

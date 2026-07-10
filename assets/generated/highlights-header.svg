@@ -1,0 +1,45 @@
+
+<svg width="1200" height="150" viewBox="0 0 1200 150" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+    aria-labelledby="title description">
+    <title id="title">Engineering highlights</title>
+    <desc id="description">
+        Section header for engineering highlights.
+    </desc>
+
+    <defs>
+        <linearGradient id="background" x1="0" y1="0" x2="1200" y2="150" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0D1117" />
+            <stop offset="1" stop-color="#161B22" />
+        </linearGradient>
+
+        <linearGradient id="accent" x1="110" y1="0" x2="1080" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#58A6FF" />
+            <stop offset="0.5" stop-color="#A371F7" />
+            <stop offset="1" stop-color="#3FB950" />
+        </linearGradient>
+    </defs>
+
+    <rect width="1200" height="150" rx="24" fill="url(#background)" />
+
+    <rect x="1" y="1" width="1198" height="148" rx="23" stroke="#30363D" stroke-width="2" />
+
+    <!-- macOS window controls -->
+    <circle cx="54" cy="36" r="7" fill="#FF5F56" />
+    <circle cx="80" cy="36" r="7" fill="#FFBD2E" />
+    <circle cx="106" cy="36" r="7" fill="#27C93F" />
+
+    <circle cx="54" cy="36" r="7" fill="#FF5F56" />
+<circle cx="80" cy="36" r="7" fill="#FFBD2E" />
+<circle cx="106" cy="36" r="7" fill="#27C93F" />
+
+<text x="70" y="76" fill="#8B949E"
+    font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="22">
+    &gt; section_engineering_highlights
+</text>
+
+<text x="70" y="116" fill="url(#accent)" font-family="Inter, Segoe UI, Arial, sans-serif"
+    font-size="30" font-weight="700">
+    Engineering highlights
+</text>
+
+</svg>
